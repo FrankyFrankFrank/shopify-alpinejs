@@ -1,0 +1,27 @@
+<div x-data="getPage()">
+    <p x-text="page.author"></p>
+    <p x-html="page.content"></p>
+    <p x-text="page.handle"></p>
+    <p x-text="page.id"></p>
+    <p x-text="page.published_at"></p>
+    <p x-text="page.template_suffix"></p>
+    <p x-text="page.title"></p>
+    <p x-text="page.url"></p>
+</div>
+
+<script>
+    function getPage() {
+        return {
+            page: {
+                author: '{{ page.author }}',
+                content: '{{ page.content }}',
+                handle: '{{ page.handle }}',
+                id: '{{ page.id }}',
+                published_at: '{{ page.published_at }}',
+                template_suffix: '{{ page.template_suffix }}',
+                title: '{{ page.title }}',
+                url: '{{ page.url }}',
+            }
+        }
+    }
+</script>
